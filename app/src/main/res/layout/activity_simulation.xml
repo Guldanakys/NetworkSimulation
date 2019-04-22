@@ -18,10 +18,83 @@
     <RelativeLayout
         android:id="@+id/my_relative_layout"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_below="@id/recycler">
+        android:layout_height="300dp"
+        android:layout_below="@id/recycler"
+        android:background="@drawable/area_borders">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:layout_alignParentEnd="true"
+            android:padding="4dp"
+            android:background="@drawable/area_borders">
+
+            <TextView
+                android:id="@+id/sim_dev_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/sim_dev_ip_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
 
     </RelativeLayout>
 
+    <LinearLayout
+        android:id="@+id/command_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/command_line_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/command_line"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <Button
+                android:id="@+id/command_enter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Enter"
+                android:minHeight="1dp"
+                android:minWidth="1dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/command_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
 
 </RelativeLayout>
